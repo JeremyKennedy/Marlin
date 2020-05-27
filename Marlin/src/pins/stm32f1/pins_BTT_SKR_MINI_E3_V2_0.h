@@ -27,8 +27,8 @@
 #define DISABLE_DEBUG
 
 // Onboard I2C EEPROM
-#define I2C_EEPROM
-#define MARLIN_EEPROM_SIZE 0x1000                 // 4KB
+// #define I2C_EEPROM
+// #define MARLIN_EEPROM_SIZE 0x1000                 // 4KB
 
 #define NEOPIXEL_PIN                       PA8   // LED driving pin
 
