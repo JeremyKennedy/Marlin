@@ -44,6 +44,13 @@
 #define SERVO0_PIN                          PA1   // "SERVOS"
 
 //
+// Power Loss Detection
+//
+#ifndef POWER_LOSS_PIN
+  #define POWER_LOSS_PIN                    PC12
+#endif
+
+//
 // Limit Switches
 //
 #define X_STOP_PIN                          PC0   // "X-STOP"
