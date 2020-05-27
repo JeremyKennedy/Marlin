@@ -289,15 +289,16 @@
 #define BOARD_BTT_SKR_MINI_V1_1       4012  // BigTreeTech SKR Mini v1.1 (STM32F103RC)
 #define BOARD_BTT_SKR_MINI_E3_V1_0    4013  // BigTreeTech SKR Mini E3 (STM32F103RC)
 #define BOARD_BTT_SKR_MINI_E3_V1_2    4014  // BigTreeTech SKR Mini E3 V1.2 (STM32F103RC)
-#define BOARD_BTT_SKR_E3_DIP          4015  // BigTreeTech SKR E3 DIP V1.0 (STM32F103RC / STM32F103RE)
-#define BOARD_JGAURORA_A5S_A1         4016  // JGAurora A5S A1 (STM32F103ZET6)
-#define BOARD_FYSETC_AIO_II           4017  // FYSETC AIO_II
-#define BOARD_FYSETC_CHEETAH          4018  // FYSETC Cheetah
-#define BOARD_FYSETC_CHEETAH_V12      4019  // FYSETC Cheetah V1.2
-#define BOARD_LONGER3D_LK             4020  // Alfawise U20/U20+/U30 (Longer3D LK1/2) / STM32F103VET6
-#define BOARD_GTM32_MINI              4021  // STM32F103VET6 controller
-#define BOARD_GTM32_MINI_A30          4022  // STM32F103VET6 controller
-#define BOARD_GTM32_REV_B             4023  // STM32F103VET6 controller
+#define BOARD_BTT_SKR_MINI_E3_V2_0    4015  // BigTreeTech SKR Mini E3 V2.0 (STM32F103RC)
+#define BOARD_BTT_SKR_E3_DIP          4016  // BigTreeTech SKR E3 DIP V1.0 (STM32F103RC / STM32F103RE)
+#define BOARD_JGAURORA_A5S_A1         4017  // JGAurora A5S A1 (STM32F103ZET6)
+#define BOARD_FYSETC_AIO_II           4018  // FYSETC AIO_II
+#define BOARD_FYSETC_CHEETAH          4019  // FYSETC Cheetah
+#define BOARD_FYSETC_CHEETAH_V12      4020  // FYSETC Cheetah V1.2
+#define BOARD_LONGER3D_LK             4021  // Alfawise U20/U20+/U30 (Longer3D LK1/2) / STM32F103VET6
+#define BOARD_GTM32_MINI              4022  // STM32F103VET6 controller
+#define BOARD_GTM32_MINI_A30          4023  // STM32F103VET6 controller
+#define BOARD_GTM32_REV_B             4024  // STM32F103VET6 controller
 
 //
 // ARM Cortex-M4F
