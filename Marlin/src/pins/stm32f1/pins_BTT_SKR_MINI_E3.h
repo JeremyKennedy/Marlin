@@ -31,16 +31,25 @@
 // Ignore temp readings during development.
 //#define BOGUS_TEMPERATURE_GRACE_PERIOD 2000
 
-#define FLASH_EEPROM_EMULATION
-#define EEPROM_PAGE_SIZE     uint16(0x800) // 2KB
-#define EEPROM_START_ADDRESS uint32(0x8000000 + (STM32_FLASH_SIZE) * 1024 - 2 * EEPROM_PAGE_SIZE)
-#undef E2END
-#define E2END                (EEPROM_PAGE_SIZE - 1) // 2KB
+#if NONE(SDCARD_EEPROM_EMULATION, I2C_EEPROM)
+  #define FLASH_EEPROM_EMULATION
+  #define EEPROM_PAGE_SIZE     uint16(0x800) // 2KB
+  #define EEPROM_START_ADDRESS uint32(0x8000000 + (STM32_FLASH_SIZE) * 1024 - 2 * EEPROM_PAGE_SIZE)
+  #undef E2END
+  #define E2END                (EEPROM_PAGE_SIZE - 1) // 2KB
+#endif
 
 //
 // Servos
 //
 #define SERVO0_PIN                          PA1
+
+//
+// Power Loss Detection
+//
+#ifndef POWER_LOSS_PIN
+  #define POWER_LOSS_PIN                    PC12
+#endif
 
 //
 // Limit Switches
@@ -91,12 +100,15 @@
 //
 #define HEATER_0_PIN                        PC8   // EXTRUDER
 #define HEATER_BED_PIN                      PC9   // BED
-#define FAN_PIN                             PA8
-
+#ifndef FAN_PIN
+  #define FAN_PIN                           PA8
+#endif
 //
 // USB connect control
 //
-#define USB_CONNECT_PIN                     PC13
+#ifndef USB_CONNECT_PIN
+  #define USB_CONNECT_PIN                   PC13
+#endif
 #define USB_CONNECT_INVERTING false
 
 #define SD_DETECT_PIN                       PC4
@@ -111,14 +123,17 @@
  *                 -----
  *                 EXP1
  */
-
-#define EXPA1_03_PIN                        PB7
+#ifndef EXPA1_03_PIN
+  #define EXPA1_03_PIN                      PB7
+#endif
 #define EXPA1_04_PIN                        PB8
 #define EXPA1_05_PIN                        PB9
 #define EXPA1_06_PIN                        PA10
 #define EXPA1_07_PIN                        -1
 #define EXPA1_08_PIN                        PA9
-#define EXPA1_09_PIN                        PB6
+#ifndef EXPA1_09_PIN
+  #define EXPA1_09_PIN                      PB6
+#endif
 #define EXPA1_10_PIN                        PB5
 
 #if HAS_SPI_LCD
